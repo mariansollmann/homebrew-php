@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'abstract-php-extension')
 
-class Php53Ionguardloader < AbstractPhp53Extension
+class Php53Ioncubeloader < AbstractPhp53Extension
   init
   homepage 'http://www.ioncube.com/loaders.php'
   if Hardware.is_64_bit?
@@ -18,7 +18,10 @@ class Php53Ionguardloader < AbstractPhp53Extension
   def extension_type; "zend_extension"; end
 
   def install
-    prefix.install "ioncube_loader_dar_5.3.so"
+    prefix.install "ioncube_loader_dar_5.3.so" => "ioncubeloader.so"
+    write_config_file unless build.include? "without-config-file"
   end
 
 end
+
+
