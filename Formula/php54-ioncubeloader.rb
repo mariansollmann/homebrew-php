@@ -21,5 +21,4 @@ class Php54Ioncubeloader < AbstractPhp54Extension
     prefix.install "ioncube_loader_dar_5.4.so" => "ioncubeloader.so"
     write_config_file unless build.include? "without-config-file"
   end
-
 end
