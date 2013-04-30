@@ -23,5 +23,3 @@ class Php54Ioncubeloader < AbstractPhp54Extension
   end
 
 end
-
-
